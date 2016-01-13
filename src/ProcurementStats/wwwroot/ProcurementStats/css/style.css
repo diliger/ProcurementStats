@@ -1,0 +1,242 @@
+body {
+    background: #ffffff;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0;
+}
+
+.graph section.list {
+    flex: 0 1 auto;
+    flex-direction: column;
+}
+
+.graph section {
+    flex-direction: column;
+}
+
+.graph.menu {
+    display: block;
+    list-style-type: none;
+    padding: 0 0 0 40px;
+    margin: 0;
+    background-color: #4479BA;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.graph.menu li {
+    display: inline-block;
+    padding: 10px 20px 10px 0;
+}
+
+.graph.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.graph.menu li a:hover {
+    text-decoration: underline;
+}
+
+.graph.panes {
+    display: flex;
+    padding: 10px;
+}
+
+.graph.panes section {
+    flex: 1 1 auto;
+    border: 1px solid rgb(226, 226, 226);
+    background: #FCFCFC;
+    border-radius: 5px;
+    padding: 10px 20px 20px 20px;
+    margin: 10px;
+}
+
+.graph.panes section.list {
+    flex: 1 0 auto;
+    width: 425px;
+}
+
+.graph.panes section {
+    flex: 4 0 auto;
+    width: 450px;
+}
+
+.graph.panes section .graph-item-cell {
+    width: 20%;
+}
+
+.graph.panes section .graph-item-cell:first-child {
+    width: 40%;
+}
+
+.graph input,
+.graph select,
+.graph textarea,
+.graph button {
+    font-family: inherit;
+}
+
+.graph input {
+    font-size: 100%;
+}
+
+/* Header */
+.graph h3 {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-size: 24px;
+    line-height: 40px;
+    color: black;
+}
+
+.graph .subtitle {
+    margin: 10px 0px 20px 0px;
+}
+
+.graph .subtitle label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.graph .subtitle input {
+    margin-top: 3px;
+    padding: 6px 10px 6px 10px;
+    border: 1px solid #cccccc;
+}
+
+.graph .graph-items {
+    display: table;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.graph .graph-items-body {
+    display: table-row-group;
+}
+
+.graph .graph-items-head {
+    display: table-header-group;
+}
+
+.graph .graph-items-head .graph-item-cell,
+.graph .graph-items-foot .graph-item-cell:last-child {
+    border-width: 1px 1px 1px 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #cccccc;
+    color: #000000;
+    background-color: #eeeeee;
+    font-weight: bold;
+    text-align: center;
+}
+
+.graph .graph-items-foot {
+    display: table-footer-group;
+}
+
+.graph .graph-item {
+    display: table-row;
+}
+
+.graph .graph-item-cell {
+    display: table-cell;
+    border-width: 1px;
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-color: #cccccc;
+    background-color: #ffffff;
+}
+
+.graph .graph-items-head .graph-item-cell:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.graph .graph-items-head .graph-item-cell:last-child,
+.graph .graph-items-foot .graph-item-cell:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.graph .graph-item-cell input {
+    margin: 0px;
+    padding: 8px 10px 8px 10px;
+    border-width: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.graph .graph-item-cell input[type=number],
+.graph .graph-item-cell input.number {
+    text-align: right;
+    /*padding-right: 0px;*/
+}
+
+.graph .graph-item-cell.readonlycell {
+    padding: 6px 10px 6px 10px;
+}
+
+.graph .graph-item-cell.alignright {
+    text-align: right;
+}
+
+.graph .graph-items-foot .graph-item-cell {
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    background-color: transparent;
+}
+
+.graph button {
+    margin: 0px 4px 6px 0;
+    padding: 8px 15px 8px 15px;
+    background: #4479BA;
+    color: #FFF;
+    border: 0px;
+}
+
+.graph button:hover {
+    cursor: pointer;
+    background-color:#5588c7;
+}
+
+.graph .graph-item-cell a:link {
+    color: #3d85b4;
+    text-decoration: underline;
+    padding: 6px 10px 6px 10px;
+}
+
+.graph .graph-item-cell a:visited {
+    color: #3d85b4;
+    text-decoration: underline;
+}
+
+.graph .graph-item-cell a:active,
+.graph .graph-item-cell a:hover {
+    color: #59a0c3;
+    text-decoration: underline;
+}
+
+.graph ul.autocomplete {
+    display: block;
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.37);
+    list-style-type: none;
+    padding: 0px;
+    margin: 2px 0px;
+    position: absolute;
+}
+
+.graph ul.autocomplete li {
+    padding: 0px;
+}
+
+.graph ul.autocomplete li a {
+    display: block;
+    padding: 4px 10px;
+    color: #3d85b4;
+}

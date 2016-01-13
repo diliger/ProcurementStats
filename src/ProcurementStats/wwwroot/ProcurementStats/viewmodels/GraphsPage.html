@@ -1,0 +1,42 @@
+﻿<link rel="stylesheet" href="/ProcurementStats/css/style.css">
+<link rel="import" href="/sys/puppet-redirect/puppet-redirect.html">
+
+<template>
+    <template is="dom-bind">
+        <h3>Procurement Graphs</h3>
+
+        <div class="graph-items">
+            <div class="graph-items-head">
+                <div class="graph-item-cell">#</div>
+                <div class="graph-item-cell">Name</div>
+                <div class="graph-item-cell">Description</div>
+                <div class="graph-item-cell">Date from</div>
+                <div class="graph-item-cell">Date to</div>
+            </div>
+
+            <div class="graph-items-body">
+                <template is="dom-repeat" items="{{model.Graphs}}">
+                    <div class="graph-item">
+                        <!-- Interpolate string using computed binding -->
+                        <div class="graph-item-cell readonlycell">
+                            <a href="{{item.Url}}">{{item.Key}}</a>
+                        </div>
+                        <div class="graph-item-cell readonlycell">
+                            <span>{{item.Name}}</span>
+                        </div>
+                        <div class="graph-item-cell readonlycell">
+                            <span>{{item.Description}}</span>
+                        </div>
+                        <div class="graph-item-cell readonlycell">
+                            <span>{{item.DateFrom}}</span>
+                        </div>
+                        <div class="graph-item-cell readonlycell">
+                            <span>{{item.DateTo}}</span>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <dom-bind-notifier path="model" observed-object="{{model}}" deep></dom-bind-notifier>
+    </template>
+</template>

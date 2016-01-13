@@ -1,0 +1,50 @@
+﻿<link rel="import" href="/sys/pikaday-decorator/pikaday-decorator.html" />
+<template>
+    <!-- Consume this model in Polymer's autobinding element -->
+    <template is="dom-bind">
+        <div>The <b>{{model.Name}}</b> graph.</div>
+        <div class="subtitle">
+            <label>Name</label>
+            <input type="text" value="{{model.Name$::input}}" />
+            <label>Description</label>
+            <textarea value="{{model.Description$::input}}"></textarea>
+            <label>Date from</label>
+            <pikaday-decorator format="YYYY-MM-DD">
+                <input type="text" value="{{model.DateFrom$::change}}" placeholder="Select date from" />
+            </pikaday-decorator>
+            <label>Date to</label>
+            <pikaday-decorator format="YYYY-MM-DD">
+                <input type="text" value="{{model.DateTo$::change}}" placeholder="Select date to" />
+            </pikaday-decorator>
+        </div>
+
+        <div>
+            <!-- Trigger button handlers on click -->
+            <button value="{{model.Save$::click}}" onmousedown="++this.value">
+                Save changes
+            </button>
+            <button value="{{model.Cancel$::click}}" onmousedown="++this.value">
+                Cancel changes
+            </button>
+            <button value="{{model.Delete$::click}}" onmousedown="++this.value">
+                Delete
+            </button>
+        </div>
+
+        <link is="puppet-redirect" history url="{{model.RedirectUrl$}}">
+
+        <div>
+            <template is="dom-repeat" items="{{model.Values}}">
+                <pre>
+                    <span>X:</span>
+                    <span>{{item.XValue}}</span>                    
+                    <span>Y:</span>
+                    <span>{{item.YValue}}</span>                    
+                    <span>XLabel:</span>
+                    <span>{{item.XLabel}}</span>
+                </pre>
+            </template>
+        </div>
+        <dom-bind-notifier path="model" observed-object="{{model}}" deep></dom-bind-notifier>
+    </template>
+</template>

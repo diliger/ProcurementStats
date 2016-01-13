@@ -1,0 +1,18 @@
+{
+  "Html": "",
+  "Name$": "",
+  "DateFrom$": "",
+  "DateTo$":  "",
+  "Description$": "",
+  "GraphValues": [
+    {
+      "XLabel": "",
+      "XValue": 0.0,
+      "YValue": 0.0
+    }
+  ],
+  "Save$": 0,
+  "Cancel$": 0,
+  "Delete$": 0,
+  "RedirectUrl$": ""
+}

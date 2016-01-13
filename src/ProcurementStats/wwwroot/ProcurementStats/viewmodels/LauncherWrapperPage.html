@@ -1,0 +1,49 @@
+﻿<link rel="import" src="/sys/polymer/polymer.html">
+<link rel="import" href="/sys/dom-bind-notifier/dom-bind-notifier.html">
+
+<!-- Create document template, which is to be bound to the JSON view-model -->
+<template>
+    <style>
+        .graph {
+            display: flex;
+        }
+
+            .graph section {
+                flex: 1 1 auto;
+                border: 1px solid rgb(226, 226, 226);
+                background: #FCFCFC;
+                border-radius: 5px;
+                padding: 10px 20px 20px 20px;
+                margin: 10px;
+            }
+    </style>
+
+    <ul class="graph menu">
+        <li><a href="/ProcurementStats">Home</a></li>
+        <li><a href="/ProcurementStats/NewGraph">New Graph</a></li>
+    </ul>
+
+    <template is="dom-bind">
+        <section class="graph panes">
+            <section class="graph list">
+                <!-- start left pane of the UI -->
+                <template is="imported-template" content$="{{model.RecentGraphs.Html}}" model="{{model.RecentGraphs}}"></template>
+                <!-- end left pane of the UI -->
+            </section>
+
+            <section class="">
+                <!-- start right pane of the UI -->
+                <template is="dom-if" restamp if="{{model.FocusedGraph.Html}}">
+                    <template is="imported-template" content$="{{model.FocusedGraph.Html}}" model="{{model.FocusedGraph}}">
+                    </template>
+                </template>
+                <template is="dom-if" restamp if="{{!model.FocusedGraph.Html}}">
+                    <h3>Welcome to the Procurement Stats application</h3>
+                </template>
+                <!-- end right pane of the UI -->
+            </section>
+        </section>
+        <dom-bind-notifier path="model" observed-object="{{model}}" deep>
+        </dom-bind-notifier>
+    </template>
+</template>

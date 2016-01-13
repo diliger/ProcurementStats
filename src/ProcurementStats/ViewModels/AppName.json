@@ -1,0 +1,6 @@
+{
+    "name": "Procurement Stats",
+    "description": "Procurement Stats",
+    "html": "/ProcurementStats/viewmodels/AppIconPage.html",
+    "url": "ProcurementStats"
+}
