@@ -2,7 +2,7 @@
   "Html": "",
   "Name$": "",
   "DateFrom$": "",
-  "DateTo$":  "",
+  "DateTo$": "",
   "Description$": "",
   "GraphValues": [
     {
@@ -14,5 +14,7 @@
   "Save$": 0,
   "Cancel$": 0,
   "Delete$": 0,
-  "RedirectUrl$": ""
+  "Build$": 0,
+  "RedirectUrl$": "",
+  "Graph": { }
 }

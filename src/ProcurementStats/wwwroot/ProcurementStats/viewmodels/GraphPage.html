@@ -30,19 +30,13 @@
                 Delete
             </button>
         </div>
-
         <link is="puppet-redirect" history url="{{model.RedirectUrl$}}">
 
+        <starcounter-include partial="{{model.Graph}}"></starcounter-include>
+
         <div>
-            <template is="dom-repeat" items="{{model.Values}}">
-                <pre>
-                    <span>X:</span>
-                    <span>{{item.XValue}}</span>                    
-                    <span>Y:</span>
-                    <span>{{item.YValue}}</span>                    
-                    <span>XLabel:</span>
-                    <span>{{item.XLabel}}</span>
-                </pre>
+            <template is="dom-repeat" items="{{model.GraphValues}}">
+                <div><span>X: </span><span>{{item.XValue}}</span><span>; Y: </span><span>{{item.YValue}}</span><span>; XLabel: </span><span>{{item.XLabel}}</span></div>
             </template>
         </div>
         <dom-bind-notifier path="model" observed-object="{{model}}" deep></dom-bind-notifier>

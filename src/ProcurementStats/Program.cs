@@ -67,6 +67,7 @@ namespace ProcurementStats {
                     page.Deleted += (s, a) => {
                         ((GraphsPage)master.RecentGraphs).RefreshData();
                     };
+                    page.RequestGraph();
 
                     return page;
                 });
