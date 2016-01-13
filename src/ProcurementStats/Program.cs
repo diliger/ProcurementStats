@@ -36,7 +36,7 @@ namespace ProcurementStats {
                 master.FocusedGraph = Db.Scope<GraphPage>(() => {
                     GraphPage page = new GraphPage() {
                         Html = "/ProcurementStats/viewmodels/GraphPage.html",
-                        Data = new Simplified.Ring6.ProcurementGraph()
+                        Data = new Simplified.Ring6.ProcurementGraph() { DateTo = DateTime.Now.Date, DateFrom = DateTime.Now.AddMonths(-1).Date }
                     };
 
                     page.Saved += (s, a) => {

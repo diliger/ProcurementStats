@@ -1,4 +1,5 @@
 using Starcounter;
+using Simplified.Ring6;
 
 namespace ProcurementStats {
     partial class GraphsPage : Page {
@@ -11,8 +12,11 @@ namespace ProcurementStats {
         [GraphsPage_json.Graphs]
         partial class GraphsItemPage {
             protected override void OnData() {
+                ProcurementGraph data = (ProcurementGraph)Data;
                 base.OnData();
                 this.Url = string.Format("/ProcurementStats/Details/{0}", this.Key);
+                this.DateFromString = data.DateFrom.ToShortDateString();
+                this.DateToString = data.DateTo.ToShortDateString();
             }
         }
     }

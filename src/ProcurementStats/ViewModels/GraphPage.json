@@ -3,6 +3,8 @@
   "Name$": "",
   "DateFrom$": "",
   "DateTo$": "",
+  "DateFromString$": "",
+  "DateToString$": "",
   "Description$": "",
   "GraphValues": [
     {

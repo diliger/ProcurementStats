@@ -5,7 +5,9 @@
       "Key": "",
       "Name": "",
       "DateFrom": "",
-      "DateTo":  "",
+      "DateTo": "",
+      "DateFromString": "",
+      "DateToString": "",
       "Description": "",
       "Url": ""
     }

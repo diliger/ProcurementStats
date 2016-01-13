@@ -48,9 +48,33 @@ namespace ProcurementStats {
             RedirectUrl = "/ProcurementStats"; //redirect to the home URL        
         }
 
+        void Handle(Input.DateFromString action) {
+            DateTime date;
+            if (!DateTime.TryParse(action.Value, out date)) {
+                action.Cancel();
+                return;
+            }
+            DateFrom = action.Value;
+        }
+
+        void Handle(Input.DateToString action) {
+            DateTime date;
+            if (!DateTime.TryParse(action.Value, out date)) {
+                action.Cancel();
+                return;
+            }
+            DateTo = action.Value;
+        }
+
         //void Handle(Input.Build action) {
         //    RequestGraph();
         //}
+
+        protected override void OnData() {
+            base.OnData();
+            this.DateFromString = Data.DateFrom.ToShortDateString();
+            this.DateToString = Data.DateTo.ToShortDateString();
+        }
 
         protected void OnSaved() {
             if (this.Saved != null) {

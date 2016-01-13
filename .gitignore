@@ -111,3 +111,4 @@ UpgradeLog*.XML
 .idea
 
 src/*/node_modules/
+.vs/config/applicationhost.config
