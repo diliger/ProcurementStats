@@ -1,7 +1,7 @@
 # Procurement Stats
 Procurement Stats application. Statistical graphs over Procurement purchase orders.
 
-This application lets you manipulate (create, edit, remove) ProcurementGraphs (which inherits Graph class) and builds values based on purchase orders from Procurement (https://github.com/StarcounterSamples/Procurement) application and period filter.
+This application lets you manipulate (create, edit, remove) ProcurementGraphs (which inherits Graph class) and fills GraphValues based on purchase orders from Procurement (https://github.com/StarcounterSamples/Procurement) application and period filter.
 
 For now it has only one type of report - sold count per product for period.
 
